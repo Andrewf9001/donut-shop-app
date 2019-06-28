@@ -13,6 +13,7 @@ const DonutAdmin = props => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [donut_image, setDonutFile] = useState("");
+  const [donutId, setDonutId] = useState("");
 
   const [apiMethod, changeApiMethod] = useState("POST");
 
@@ -64,6 +65,7 @@ const DonutAdmin = props => {
         description: description,
         price: price,
         picture: donut_image,
+        donutId: donutId,
         userId: 1
       }
     })
@@ -115,7 +117,15 @@ const DonutAdmin = props => {
           save
         </button>
       </form>
-      <DisplayDonuts showUpdate={true} changeApiMethod={changeApiMethod} />
+      <DisplayDonuts
+        showUpdate={true}
+        changeApiMethod={changeApiMethod}
+        setName={setName}
+        setDescription={setDescription}
+        setPrice={setPrice}
+        setDonutFile={setDonutFile}
+        setDonutId={setDonutId}
+      />
     </div>
   );
 };
