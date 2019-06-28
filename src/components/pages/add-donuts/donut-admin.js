@@ -74,28 +74,34 @@ const DonutAdmin = props => {
   };
 
   return (
-    <div>
-      <h1>hi</h1>
-      <form onSubmit={e => handleNewDonutSubmission(e)}>
+    <div className="dz-form-wrapper">
+      <form
+        className="dz-form-input"
+        onSubmit={e => handleNewDonutSubmission(e)}
+      >
         <input
+          className="dz-input"
           type="text"
           placeholder="Donut Name"
           value={donutName}
           onChange={e => setName(e.target.value)}
         />
         <input
+          className="dz-input"
           type="text"
           placeholder="Description"
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
         <input
+          className="dz-input"
           type="text"
           placeholder="Price (no $ signs)"
           value={price}
           onChange={e => setPrice(e.target.value)}
         />
         <DropzoneComponent
+          className="dz-image"
           ref={donutRef}
           config={componentConfig()}
           djsConfig={djsConfig()}
@@ -103,7 +109,9 @@ const DonutAdmin = props => {
         >
           <div className="dz-message">Donut Picture</div>
         </DropzoneComponent>
-        <button type="submit">save</button>
+        <button className="dz-btn" type="submit">
+          save
+        </button>
       </form>
       <DisplayDonutsSmall />
     </div>

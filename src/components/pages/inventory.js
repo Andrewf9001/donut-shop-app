@@ -6,7 +6,7 @@ class Inventory extends Component {
   render() {
     return (
       <div className="inventory-wrapper">
-        <h1>FUCKING DONUTS</h1>
+        <h1>DONUTS</h1>
       </div>
     );
   }
