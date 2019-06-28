@@ -41,8 +41,8 @@ const Auth = () => {
 
   return (
     <div className="auth-wrapper">
-      <div>{isLoading ? "Loading" : errorText}</div>
-      <div className="user-name">{name ? name : null}</div>
+      <div>{isLoading ? "Loading" : null}</div>
+      <div className="user-name">{name ? name : errorText}</div>
       <div className="form-input-wrapper">
         <form className="form-wrapper" onSubmit={e => handleLoginSubmit(e)}>
           <input
