@@ -40,7 +40,7 @@ const DonutAdmin = props => {
     console.log("something");
     Axios({
       method: "POST",
-      url: "cloudinary://825867455227264:OcBRrNb_jvdNKBLV_e4qUW88Eps@do31dqixt",
+      url: "https://api.cloudinary.com/v1_1/do31dqixt/image/upload",
       data: donut_image.dataURL
     })
       .then(response => {
@@ -107,9 +107,3 @@ const DonutAdmin = props => {
 };
 
 export default DonutAdmin;
-
-// cloud_name: do31dqixt;
-// api_key: 825867455227264;
-// api_secret: OcBRrNb_jvdNKBLV_e4qUW88Eps;
-// CLOUDINARY_URL =
-//   "cloudinary://825867455227264:OcBRrNb_jvdNKBLV_e4qUW88Eps@do31dqixt";
