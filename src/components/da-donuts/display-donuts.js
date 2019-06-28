@@ -8,7 +8,17 @@ const DisplayDonuts = props => {
   const displayDonuts = () => {
     return donutArray.map((donut, index) => {
       return (
-        <RenderDonut showUpdate={props.showUpdate} key={index} donut={donut} />
+        <RenderDonut
+          showUpdate={props.showUpdate}
+          key={index}
+          donut={donut}
+          changeApiMethod={props.changeApiMethod}
+          setName={props.setName}
+          setDescription={props.setDescription}
+          setPrice={props.setPrice}
+          setDonutFile={props.setDonutFile}
+          setDonutId={props.setDonutId}
+        />
       );
     });
   };
