@@ -11,14 +11,14 @@ class Navigation extends Component {
             HOME
           </NavLink>
         </div>
-        <div className="auth-wrapper">
-          <NavLink exact to="/auth" activeClassName="nav-link-active">
-            LOGIN
-          </NavLink>
-        </div>
         <div className="donuts-wrapper">
           <NavLink to="/donuts" activeClassName="nav-link-active">
             DONUTS
+          </NavLink>
+        </div>
+        <div className="auth-wrapper">
+          <NavLink exact to="/auth" activeClassName="nav-link-active">
+            LOGIN
           </NavLink>
         </div>
       </div>

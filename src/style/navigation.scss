@@ -1,0 +1,46 @@
+.navigation-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+
+  .homepage-wrapper {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $light-blue;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  .donuts-wrapper {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $light-blue;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        font-weight: bold;
+        color: $pink;
+      }
+    }
+  }
+  .auth-wrapper {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $light-blue;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+}
