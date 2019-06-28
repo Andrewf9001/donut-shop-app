@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import RenderDonut from "../../da-donuts/render-donut";
+import RenderDonut from "./render-donut";
 
-const DisplayDonutsSmall = () => {
+const DisplayDonuts = props => {
   const [donutArray, fillDonut] = useState([]);
 
   const displayDonuts = () => {
     return donutArray.map((donut, index) => {
-      return <RenderDonut key={index} donut={donut} />;
+      return (
+        <RenderDonut showUpdate={props.showUpdate} key={index} donut={donut} />
+      );
     });
   };
 
@@ -32,4 +34,4 @@ const DisplayDonutsSmall = () => {
   );
 };
 
-export default DisplayDonutsSmall;
+export default DisplayDonuts;
