@@ -4,11 +4,14 @@ const RenderDonut = props => {
   console.log(props.donut.name);
   return (
     <div className="donut-item-wrapper">
-      <div className="something">{props.donut.name}</div>
-      <div>{props.donut.description}</div>
-      <div>{`$ ${props.donut.price}`}</div>
+      <div className="donut-name">{props.donut.name}</div>
+      <div className="donut-price">{`$ ${props.donut.price}`}</div>
+      <div className="donut-description">{props.donut.description}</div>
       <img src={props.donut.picture} />
-      <button>update</button>
+      <div className="update-delete-btns-wrapper">
+        <button className="update-delete-btns">Update</button>
+        <button className="update-delete-btns">Delete</button>
+      </div>
     </div>
   );
 };

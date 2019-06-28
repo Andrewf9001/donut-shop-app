@@ -25,9 +25,9 @@ const DisplayDonutsSmall = () => {
   }, []);
 
   return (
-    <div>
-      <h1>hey</h1>
-      {displayDonuts()}
+    <div className="inventory-wrapper">
+      <div className="inventory-header">Inventory</div>
+      <div className="inventory-donuts">{displayDonuts()}</div>
     </div>
   );
 };
