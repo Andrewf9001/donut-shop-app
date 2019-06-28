@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router";
 
-class Homepage extends Component {
+export default class Homepage extends Component {
   render() {
     return (
       <div>
-        <NavLink to="/donuts" activeClassName="nav-link-active">
-          DONUTS
-        </NavLink>
+        <h1>DONUT SHOP</h1>
       </div>
     );
   }
 }
-
-export default withRouter(Homepage);
