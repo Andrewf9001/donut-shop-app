@@ -65,7 +65,7 @@ const DonutAdmin = props => {
         description: description,
         price: price,
         picture: donut_image,
-        donutId: donutId,
+        // donutId: donutId,
         userId: props.userId
       }
     })
