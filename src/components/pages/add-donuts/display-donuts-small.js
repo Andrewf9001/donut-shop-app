@@ -25,7 +25,7 @@ const DisplayDonutsSmall = () => {
   }, []);
 
   return (
-    <div>
+    <div className="small-donut-cards">
       <h1>hey</h1>
       {displayDonuts()}
     </div>
