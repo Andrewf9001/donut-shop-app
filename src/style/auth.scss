@@ -1,0 +1,49 @@
+.auth-wrapper {
+  background-image: url("/static/assets/images/edited-donut.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.form-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 40px;
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+
+  .input-wrapper {
+    margin-top: 10px;
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgba(232, 68, 158, 1) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(232, 68, 158, 1) 100%
+    );
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    background-color: $brown;
+    color: white;
+    margin-top: 5px;
+    outline: none;
+    border-radius: 5px;
+    outline-color: none;
+    height: 25px;
+
+    button {
+    }
+  }
+}

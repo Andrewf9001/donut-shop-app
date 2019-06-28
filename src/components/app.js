@@ -5,10 +5,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from "./pages/navigation";
 import Homepage from "./pages/homepage";
 import Inventory from "./pages/inventory";
+import Icons from "../helpers/icons";
 
 import Auth from "./pages/auth";
 
 export default class App extends Component {
+  constructor() {
+    super();
+
+    Icons();
+  }
   render() {
     return (
       <div className="app">

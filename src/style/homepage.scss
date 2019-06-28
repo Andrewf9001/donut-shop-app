@@ -1,4 +1,18 @@
-.homepage-donuts {
+.homepage-donuts-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    color: $pink;
+    margin-top: 55px;
+  }
+
+  svg {
+    font-size: 3em;
+    color: $light-blue;
+  }
+
   img {
     width: 100%;
     margin-top: 100px;
