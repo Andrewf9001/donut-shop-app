@@ -15,7 +15,7 @@ const DonutAdmin = props => {
   const [donut_image, setDonutFile] = useState("");
   const [donutId, setDonutId] = useState("");
 
-  const [apiMethod, changeApiMethod] = useState("POST");
+  const [apiMethod, changeApiMethod] = useState("post");
 
   const donutRef = React.createRef();
 

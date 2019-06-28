@@ -12,7 +12,8 @@ const RenderDonut = props => {
     props.setDonutId(props.donut.id);
   };
   const handleDeleteButtonClick = () => {
-    props.changeApiMethod("DELETE");
+    console.log("delete it");
+    props.changeApiMethod("delete");
     props.setDonutId(props.donut.id);
   };
 
