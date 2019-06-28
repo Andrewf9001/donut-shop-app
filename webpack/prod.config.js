@@ -70,7 +70,10 @@ module.exports = webpackMerge(webpackCommon, {
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(__dirname, "../static/index.html"),
-      favicon: path.resolve(__dirname, "../static/favicon.ico"),
+      favicon: path.resolve(
+        __dirname,
+        "../static/assets/images/edited-donut.png"
+      ),
       minify: {
         removeComments: true,
         collapseWhitespace: true,

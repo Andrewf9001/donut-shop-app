@@ -6,13 +6,16 @@ import "../../../../node_modules/dropzone/dist/min/dropzone.min.css";
 import Axios from "axios";
 import request from "superagent";
 
-import DisplayDonutsSmall from "./display-donuts-small";
+import DisplayDonuts from "../../da-donuts/display-donuts";
 
 const DonutAdmin = props => {
   const [donutName, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [donut_image, setDonutFile] = useState("");
+  const [donutId, setDonutId] = useState("");
+
+  const [apiMethod, changeApiMethod] = useState("POST");
 
   const donutRef = React.createRef();
 
@@ -55,14 +58,15 @@ const DonutAdmin = props => {
     console.log(donut_image);
     console.log("something");
     Axios({
-      method: "POST",
+      method: apiMethod,
       url: "https://bottega-edonut-db.herokuapp.com/donut",
       data: {
         name: donutName,
         description: description,
         price: price,
         picture: donut_image,
-        userId: 1
+        donutId: donutId,
+        userId: props.userId
       }
     })
       .then(() => {
@@ -113,7 +117,15 @@ const DonutAdmin = props => {
           save
         </button>
       </form>
-      <DisplayDonutsSmall />
+      <DisplayDonuts
+        showUpdate={true}
+        changeApiMethod={changeApiMethod}
+        setName={setName}
+        setDescription={setDescription}
+        setPrice={setPrice}
+        setDonutFile={setDonutFile}
+        setDonutId={setDonutId}
+      />
     </div>
   );
 };
