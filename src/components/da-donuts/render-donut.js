@@ -11,6 +11,10 @@ const RenderDonut = props => {
     props.setDonutFile(props.donut.picture);
     props.setDonutId(props.donut.id);
   };
+  const handleDeleteButtonClick = () => {
+    props.changeApiMethod("DELETE");
+    props.setDonutId(props.donut.id);
+  };
 
   return (
     <div className="donut-item-wrapper">
@@ -19,9 +23,14 @@ const RenderDonut = props => {
       <div>{`$ ${props.donut.price}`}</div>
       <img src={props.donut.picture} />
       {props.showUpdate ? (
-        <button type="button" onClick={() => handleUpdateButtonClick()}>
-          update
-        </button>
+        <div>
+          <button type="button" onClick={() => handleUpdateButtonClick()}>
+            update
+          </button>
+          <button type="button" onClick={() => handleDeleteButtonClick()}>
+            delete
+          </button>
+        </div>
       ) : null}
     </div>
   );
