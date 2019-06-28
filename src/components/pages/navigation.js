@@ -16,7 +16,7 @@ class Navigation extends Component {
             DONUTS
           </NavLink>
         </div>
-        <div className="auth-wrapper">
+        <div className="auth-login-button-wrapper">
           <NavLink exact to="/auth" activeClassName="nav-link-active">
             LOGIN
           </NavLink>

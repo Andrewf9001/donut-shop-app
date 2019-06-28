@@ -35,20 +35,26 @@ const Auth = () => {
   return (
     <div className="auth-wrapper">
       <div>{isLoading ? "Loading" : errorText}</div>
-      <div>{name ? name : null}</div>
-      <form onSubmit={e => handleLoginSubmit(e)}>
-        <input
-          placeholder="UserName"
-          value={userName}
-          onChange={e => handleNameInput(e.target.value)}
-        />
-        <input
-          placeholder="Password"
-          value={userPass}
-          onChange={e => handlePasswordInput(e.target.value)}
-        />
-        <button type="submit" />
-      </form>
+      <div className="user-name">{name ? name : null}</div>
+      <div className="form-input-wrapper">
+        <form className="form-wrapper" onSubmit={e => handleLoginSubmit(e)}>
+          <input
+            className="input-wrapper"
+            placeholder="UserName"
+            value={userName}
+            onChange={e => handleNameInput(e.target.value)}
+          />
+          <input
+            className="input-wrapper"
+            placeholder="Password"
+            value={userPass}
+            onChange={e => handlePasswordInput(e.target.value)}
+          />
+          <button className="btn" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
