@@ -18,17 +18,23 @@ const RenderDonut = props => {
 
   return (
     <div className="donut-item-wrapper">
-      <div>{props.donut.name}</div>
-      <div>{props.donut.description}</div>
-      <div>{`$ ${props.donut.price}`}</div>
+      <div className="donut-name">{props.donut.name}</div>
+      <div className="donut-price">{`$ ${props.donut.price}`}</div>
+      <div className="donut-description">{props.donut.description}</div>
       <img src={props.donut.picture} />
       {props.showUpdate ? (
-        <div>
-          <button type="button" onClick={() => handleUpdateButtonClick()}>
-            update
+        <div className="update-delete-btns-wrapper">
+          <button
+            className="update-delete-btns"
+            onClick={() => handleUpdateButtonClick()}
+          >
+            Update
           </button>
-          <button type="button" onClick={() => handleDeleteButtonClick()}>
-            delete
+          <button
+            className="update-delete-btns"
+            onClick={() => handleDeleteButtonClick()}
+          >
+            Delete
           </button>
         </div>
       ) : null}
