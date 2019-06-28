@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router";
+import { NavLink } from "react-router-dom";
 
-export default class Inventory extends Component {
+class Inventory extends Component {
   render() {
     return (
-      <div>
-        <h1>INVENTORY OF DONUT</h1>
+      <div className="inventory-wrapper">
+        <h1>FUCKING DONUTS</h1>
       </div>
     );
   }
 }
+
+export default withRouter(Inventory);
